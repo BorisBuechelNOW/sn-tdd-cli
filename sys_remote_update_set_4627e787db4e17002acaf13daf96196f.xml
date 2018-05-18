@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unload unload_date="2018-05-18 09:02:18">
+<sys_remote_update_set action="INSERT_OR_UPDATE">
+<application display_value="Global">global</application>
+<application_name>Global</application_name>
+<application_scope>global</application_scope>
+<application_version/>
+<collisions/>
+<commit_date/>
+<deleted/>
+<description/>
+<inserted/>
+<name>TDD</name>
+<origin_sys_id/>
+<parent display_value=""/>
+<release_date/>
+<remote_base_update_set display_value=""/>
+<remote_parent_id/>
+<remote_sys_id>b3411b8cdb9d53402acaf13daf9619d6</remote_sys_id>
+<state>loaded</state>
+<summary/>
+<sys_class_name>sys_remote_update_set</sys_class_name>
+<sys_created_by>boris.buechel</sys_created_by>
+<sys_created_on>2018-05-18 09:02:18</sys_created_on>
+<sys_id>4627e787db4e17002acaf13daf96196f</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_updated_by>boris.buechel</sys_updated_by>
+<sys_updated_on>2018-05-18 09:02:18</sys_updated_on>
+<update_set display_value=""/>
+<update_source display_value=""/>
+<updated/>
+</sys_remote_update_set>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_ws_operation_69a8900ddbddd3402acaf13daf9619e7</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ws_operation"&gt;&lt;sys_ws_operation action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;consumes&gt;application/json,application/xml,text/xml&lt;/consumes&gt;&lt;consumes_customized&gt;false&lt;/consumes_customized&gt;&lt;default_operation_uri/&gt;&lt;enforce_acl&gt;cf9d01d3e73003009d6247e603f6a990&lt;/enforce_acl&gt;&lt;http_method&gt;GET&lt;/http_method&gt;&lt;name&gt;Get test result&lt;/name&gt;&lt;operation_script&gt;&lt;![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+    var pathParams = request.pathParams;
+    var queryParams = request.queryParams;
+    var execution_tracker = pathParams.execution_tracker;
+
+    var sysAtfTestResultGR = new GlideRecord('sys_atf_test_result');
+    sysAtfTestResultGR.get('execution_tracker', execution_tracker);
+
+    if (sysAtfTestResultGR.isValidRecord()) {
+        return {
+            output: sysAtfTestResultGR.output,
+            run_time: sysAtfTestResultGR.run_time,
+            status: sysAtfTestResultGR.status,
+        };
+    }
+
+    return new sn_ws_err.NotFoundError('An error occured.');
+})(request, response);]]&gt;&lt;/operation_script&gt;&lt;operation_uri&gt;/api/snc/tdd/result/{execution_tracker}&lt;/operation_uri&gt;&lt;produces&gt;application/json,application/xml,text/xml&lt;/produces&gt;&lt;produces_customized&gt;false&lt;/produces_customized&gt;&lt;relative_path&gt;/result/{execution_tracker}&lt;/relative_path&gt;&lt;request_example/&gt;&lt;requires_acl_authorization&gt;true&lt;/requires_acl_authorization&gt;&lt;requires_authentication&gt;true&lt;/requires_authentication&gt;&lt;short_description/&gt;&lt;sys_class_name&gt;sys_ws_operation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;boris.buechel&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2018-04-04 06:05:44&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;&lt;sys_id&gt;69a8900ddbddd3402acaf13daf9619e7&lt;/sys_id&gt;&lt;sys_mod_count&gt;1&lt;/sys_mod_count&gt;&lt;sys_name&gt;Get test result&lt;/sys_name&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ws_operation_69a8900ddbddd3402acaf13daf9619e7&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;boris.buechel&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2018-04-04 06:12:24&lt;/sys_updated_on&gt;&lt;web_service_definition display_value="TDD"&gt;05619b8cdb9d53402acaf13daf961923&lt;/web_service_definition&gt;&lt;web_service_version/&gt;&lt;/sys_ws_operation&gt;&lt;/record_update&gt;</payload>
+<payload_hash>-554222802</payload_hash>
+<remote_update_set display_value="TDD">4627e787db4e17002acaf13daf96196f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>boris.buechel</sys_created_by>
+<sys_created_on>2018-05-18 09:02:18</sys_created_on>
+<sys_id>0627e787db4e17002acaf13daf961970</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>1628f48ef310000001</sys_recorded_at>
+<sys_updated_by>boris.buechel</sys_updated_by>
+<sys_updated_on>2018-05-18 09:02:18</sys_updated_on>
+<table/>
+<target_name>Get test result</target_name>
+<type>Scripted REST Resource</type>
+<update_domain>global</update_domain>
+<update_guid>685a144d8eddd3401a2ad996824d0e76</update_guid>
+<update_guid_history>685a144d8eddd3401a2ad996824d0e76:-554222802,f2c8d8c96dddd340f426cc881fabfeb7:207260347</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_ws_operation_2ec0f536dbced3002acaf13daf961925</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ws_operation"&gt;&lt;sys_ws_operation action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;consumes&gt;application/json,application/xml,text/xml&lt;/consumes&gt;&lt;consumes_customized&gt;false&lt;/consumes_customized&gt;&lt;default_operation_uri/&gt;&lt;enforce_acl&gt;cf9d01d3e73003009d6247e603f6a990&lt;/enforce_acl&gt;&lt;http_method&gt;POST&lt;/http_method&gt;&lt;name&gt;Add test step&lt;/name&gt;&lt;operation_script&gt;&lt;![CDATA[(function process( /*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+    var pathParams = request.pathParams;
+    var queryParams = request.queryParams;
+    var sys_id = pathParams.sys_id;
+    var requestBody = request.body;
+    var order = requestBody.data.order || '100';
+    var sysAtfStepGR;
+
+    if (!sys_id || /[0-9a-f]{32}/.test(sys_id) === false) {
+        return new sn_ws_err.BadRequestError('An error occured.');
+    }
+
+    sysAtfStepGR = new GlideRecord('sys_atf_step');
+    sysAtfStepGR.initialize();
+    sysAtfStepGR.setValue('order', order);
+    // TODO: refactor hard-coded sys_id?
+    sysAtfStepGR.setValue('step_config', '41de4a935332120028bc29cac2dc349a');
+    sysAtfStepGR.setValue('test', sys_id);
+    sysAtfStepGR.insert();
+
+    response.setStatus(201);
+
+    return {
+        atf_steps: {
+            order: sysAtfStepGR.order,
+            description: sysAtfStepGR.description,
+            sys_id: sysAtfStepGR.sys_id,
+            sys_update_name: sysAtfStepGR.sys_update_name,
+            script: sysAtfStepGR.inputs.script,
+        },
+    };
+})(request, response);]]&gt;&lt;/operation_script&gt;&lt;operation_uri&gt;/api/snc/tdd/test/{sys_id}&lt;/operation_uri&gt;&lt;produces&gt;application/json,application/xml,text/xml&lt;/produces&gt;&lt;produces_customized&gt;false&lt;/produces_customized&gt;&lt;relative_path&gt;/test/{sys_id}&lt;/relative_path&gt;&lt;request_example/&gt;&lt;requires_acl_authorization&gt;true&lt;/requires_acl_authorization&gt;&lt;requires_authentication&gt;true&lt;/requires_authentication&gt;&lt;short_description/&gt;&lt;sys_class_name&gt;sys_ws_operation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;boris.buechel&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2018-05-17 05:47:08&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;&lt;sys_id&gt;2ec0f536dbced3002acaf13daf961925&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;Add test step&lt;/sys_name&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ws_operation_2ec0f536dbced3002acaf13daf961925&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;boris.buechel&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2018-05-17 06:08:38&lt;/sys_updated_on&gt;&lt;web_service_definition display_value="TDD"&gt;05619b8cdb9d53402acaf13daf961923&lt;/web_service_definition&gt;&lt;web_service_version/&gt;&lt;/sys_ws_operation&gt;&lt;/record_update&gt;</payload>
+<payload_hash>-2131403534</payload_hash>
+<remote_update_set display_value="TDD">4627e787db4e17002acaf13daf96196f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>boris.buechel</sys_created_by>
+<sys_created_on>2018-05-18 09:02:18</sys_created_on>
+<sys_id>4227e787db4e17002acaf13daf961970</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>1636cb6f2480000001</sys_recorded_at>
+<sys_updated_by>boris.buechel</sys_updated_by>
+<sys_updated_on>2018-05-18 09:02:18</sys_updated_on>
+<table/>
+<target_name>Add test step</target_name>
+<type>Scripted REST Resource</type>
+<update_domain>global</update_domain>
+<update_guid>28d53df67dced3003a82ca4b87b1d331</update_guid>
+<update_guid_history>28d53df67dced3003a82ca4b87b1d331:-2131403534,5145b5f6b2ced3005954675aa7230895:-848821454,ade03536f2ced30093bffb1543a04045:-34040527</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_ws_definition_05619b8cdb9d53402acaf13daf961923</name>
+<payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_definition"><sys_ws_definition action="INSERT_OR_UPDATE"><active>true</active><base_uri>/api/snc/tdd</base_uri><consumes>application/json,application/xml,text/xml</consumes><consumes_customized>false</consumes_customized><default_version>No active default version</default_version><doc_link/><enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl><is_versioned>false</is_versioned><name>TDD</name><namespace>snc</namespace><produces>application/json,application/xml,text/xml</produces><produces_customized>false</produces_customized><service_id>tdd</service_id><short_description/><sys_class_name>sys_ws_definition</sys_class_name><sys_created_by>boris.buechel</sys_created_by><sys_created_on>2018-04-01 16:58:26</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>05619b8cdb9d53402acaf13daf961923</sys_id><sys_mod_count>0</sys_mod_count><sys_name>TDD</sys_name><sys_package display_value="Global" source="global">global</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Global">global</sys_scope><sys_update_name>sys_ws_definition_05619b8cdb9d53402acaf13daf961923</sys_update_name><sys_updated_by>boris.buechel</sys_updated_by><sys_updated_on>2018-04-01 16:58:26</sys_updated_on></sys_ws_definition></record_update>]]></payload>
+<payload_hash>-1419489106</payload_hash>
+<remote_update_set display_value="TDD">4627e787db4e17002acaf13daf96196f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>boris.buechel</sys_created_by>
+<sys_created_on>2018-05-18 09:02:18</sys_created_on>
+<sys_id>8a27e787db4e17002acaf13daf96196f</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>162822551b70000001</sys_recorded_at>
+<sys_updated_by>boris.buechel</sys_updated_by>
+<sys_updated_on>2018-05-18 09:02:18</sys_updated_on>
+<table/>
+<target_name>TDD</target_name>
+<type>Scripted REST API</type>
+<update_domain>global</update_domain>
+<update_guid>ea615b8cd89d5340bf4e7dbbf99dd9b0</update_guid>
+<update_guid_history>ea615b8cd89d5340bf4e7dbbf99dd9b0:-1419489106</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_ws_operation_92379c24dbd993402acaf13daf961980</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ws_operation"&gt;&lt;sys_ws_operation action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;consumes&gt;application/json,application/xml,text/xml&lt;/consumes&gt;&lt;consumes_customized&gt;false&lt;/consumes_customized&gt;&lt;default_operation_uri/&gt;&lt;enforce_acl&gt;cf9d01d3e73003009d6247e603f6a990&lt;/enforce_acl&gt;&lt;http_method&gt;PUT&lt;/http_method&gt;&lt;name&gt;Start test execution&lt;/name&gt;&lt;operation_script&gt;&lt;![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+    var pathParams = request.pathParams;
+    var sys_id = pathParams.sys_id;
+    var requestBody = request.body;
+    var script = requestBody.data.script;
+    var sysAtfStepGR;
+    var userTest;
+
+    if (!sys_id || /[0-9a-f]{32}/.test(sys_id) === false || !script) {
+        return new sn_ws_err.BadRequestError('An error occured.');
+    }
+
+    sysAtfStepGR = new GlideRecord('sys_atf_step');
+    userTest = new sn_atf.ExecuteUserTest();
+
+    sysAtfStepGR.get(sys_id);
+    sysAtfStepGR.inputs.script = script;
+    sysAtfStepGR.setValue('step_config', '41de4a935332120028bc29cac2dc349a');
+
+    if (sysAtfStepGR.update()) {
+        userTest.setTestRecordSysId(sysAtfStepGR.test);
+        execution_tracker = userTest.start();
+        if (execution_tracker) {
+            return {
+                execution_tracker: execution_tracker,
+            };
+        }
+    }
+})(request, response);]]&gt;&lt;/operation_script&gt;&lt;operation_uri&gt;/api/snc/tdd/step/{sys_id}&lt;/operation_uri&gt;&lt;produces&gt;application/json,application/xml,text/xml&lt;/produces&gt;&lt;produces_customized&gt;false&lt;/produces_customized&gt;&lt;relative_path&gt;/step/{sys_id}&lt;/relative_path&gt;&lt;request_example/&gt;&lt;requires_acl_authorization&gt;true&lt;/requires_acl_authorization&gt;&lt;requires_authentication&gt;true&lt;/requires_authentication&gt;&lt;short_description/&gt;&lt;sys_class_name&gt;sys_ws_operation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;boris.buechel&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2018-04-02 16:48:08&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;&lt;sys_id&gt;92379c24dbd993402acaf13daf961980&lt;/sys_id&gt;&lt;sys_mod_count&gt;42&lt;/sys_mod_count&gt;&lt;sys_name&gt;Start test execution&lt;/sys_name&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ws_operation_92379c24dbd993402acaf13daf961980&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;boris.buechel&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2018-05-17 05:53:24&lt;/sys_updated_on&gt;&lt;web_service_definition display_value="TDD"&gt;05619b8cdb9d53402acaf13daf961923&lt;/web_service_definition&gt;&lt;web_service_version/&gt;&lt;/sys_ws_operation&gt;&lt;/record_update&gt;</payload>
+<payload_hash>236993454</payload_hash>
+<remote_update_set display_value="TDD">4627e787db4e17002acaf13daf96196f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>boris.buechel</sys_created_by>
+<sys_created_on>2018-05-18 09:02:18</sys_created_on>
+<sys_id>8a27e787db4e17002acaf13daf961970</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>1636ca8fddc0000001</sys_recorded_at>
+<sys_updated_by>boris.buechel</sys_updated_by>
+<sys_updated_on>2018-05-18 09:02:18</sys_updated_on>
+<table/>
+<target_name>Start test execution</target_name>
+<type>Scripted REST Resource</type>
+<update_domain>global</update_domain>
+<update_guid>1152397674ced300fbfda91c96b70ddd</update_guid>
+<update_guid_history>1152397674ced300fbfda91c96b70ddd:236993454,245ff2cdd4951740ca5c65b0f7bee23e:1784239568,3c5b728dcc95174082a7a7b4b5e23ee1:-332480784,6d8b908d5fddd340d858f0aa5133b502:928156901,876b5c4d24ddd34052cdbae8b2d51dfd:181740037,195978fc2195d3400aa3fa2cd8a09092:1573691761,a39870fc6a95d340b32a5706b414b447:652494877,6774f43ccd95d340d988c1f16e9956ec:1308592584,54f37cf8fc95d3408f42cbcb975b0d04:-1679883352,ebd270f89495d340c2293e14ac85a725:-1275262378,1922b8b81695d340bf694a04e67702ba:2070679960,c491f4b86095d34046d862b440262271:-630363389,1341b0b85f95d340f49087706f20bca4:-494999308,bed0bc384e95d3401fc82e418971db56:286011774,169720f01195d340f50ede0676e66ddd:854884447,f207ecb07395d3401a37790e1e2ed7b4:1231865484,e670e8bcf755d340dbd5e6b3e8556da3:-1805342627,581dd03c2b55d34099d74360dc17e0e2:1043336837,6dccd03c0e55d340404551c1f1dd98db:279877856,180c90f81055d3407d448699b599effe:378808067,fbd99cf47f55d34053f0bd25af021b4e:-1353260530,9a6794f4a955d3402246248db3b37940:693780814,2b0794f46d55d340583dca622df10f0a:1998258223,c8b51be84491d3401f767b778f964518:-1636910319,06e453e83c91d3404c99ccd11e5b0361:851023922,f49213a84d91d34081389f3d163e8b83:-155306434,fe3297681191d340e3dcf3e129da2272:1138717299,03a113683591d34086e18ba9e98b1fe5:-1068076748,824113685191d34051dfa377dfc3afe0:-2108039010,a421d7285d91d340298c1cfebfbc08de:-1848248056,8490d7285891d3406ab2e8afc5b5877e:2094975836,ec0ccb244a91d340e94b20b0b8dc726f:-315857391,c1dbcb24ca91d340a4405af50382cf68:330463346,389a47248891d340586154c7a8532c84:-683226781,aedd09a4175d93400cbb8bfe0551b9d1:-859164525,f60b0924fe5d934018fd5f296b04044e:-53276653,59f58560815d9340f41f9651d4632a80:-492603603,66c505605d5d9340ac21d0f6fe7c3980:1919843181,f2a36c2ca2d99340cc51b9226022920d:-816078739,11f1a8e806d99340cd471cbd7f849c14:-609928998,a18164e8ecd99340958e2423a8c241a7:-1617060321,e78064a8a4d99340d04fbbe423613f49:2006540390,21a8d86439d99340065b9875692e80bf:-831621986</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+<sys_update_xml action="INSERT_OR_UPDATE">
+<action>INSERT_OR_UPDATE</action>
+<application display_value="Global">global</application>
+<category>customer</category>
+<comments/>
+<name>sys_ws_operation_6a71db8cdb9d53402acaf13daf961960</name>
+<payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ws_operation"&gt;&lt;sys_ws_operation action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;consumes&gt;application/json,application/xml,text/xml&lt;/consumes&gt;&lt;consumes_customized&gt;false&lt;/consumes_customized&gt;&lt;default_operation_uri/&gt;&lt;enforce_acl&gt;cf9d01d3e73003009d6247e603f6a990&lt;/enforce_acl&gt;&lt;http_method&gt;POST&lt;/http_method&gt;&lt;name&gt;Create a test&lt;/name&gt;&lt;operation_script&gt;&lt;![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+    var requestBody = request.body;
+    var name = requestBody.data.name;
+    var description = requestBody.data.description;
+    var sysAtfTestGR = new GlideRecord('sys_atf_test');
+    var sysAtfStepGR = new GlideRecord('sys_atf_step');
+    var sysAtfStepConfigGR = new GlideRecord('sys_atf_step_config');
+    var test_sys_id;
+
+    if (name &amp;&amp; description) {
+        // TODO: refactor hard-coded sys_id?
+        sysAtfStepConfigGR.get('41de4a935332120028bc29cac2dc349a');
+        sysAtfTestGR.initialize();
+        sysAtfTestGR.setValue('name', name);
+        sysAtfTestGR.setValue('description', description);
+        test_sys_id = sysAtfTestGR.insert();
+
+        sysAtfStepGR.initialize();
+        sysAtfStepGR.setValue('order', '1');
+        sysAtfStepGR.setValue(
+            'step_config',
+            sysAtfStepConfigGR.getValue('sys_id')
+        );
+        sysAtfStepGR.setValue('test', test_sys_id);
+        sysAtfStepGR.insert();
+
+        response.setStatus(201);
+        return {
+            atf_test: {
+                name: sysAtfTestGR.name,
+                description: sysAtfTestGR.description,
+                sys_id: sysAtfTestGR.sys_id,
+                atf_steps: {
+                    order: sysAtfStepGR.order,
+                    description: sysAtfStepGR.description,
+                    sys_id: sysAtfStepGR.sys_id,
+                    sys_update_name: sysAtfStepGR.sys_update_name,
+                    script: sysAtfStepGR.inputs.script,
+                },
+            },
+        };
+    }
+
+    return new sn_ws_err.BadRequestError('An error occured.');
+})(request, response);
+]]&gt;&lt;/operation_script&gt;&lt;operation_uri&gt;/api/snc/tdd/test&lt;/operation_uri&gt;&lt;produces&gt;application/json,application/xml,text/xml&lt;/produces&gt;&lt;produces_customized&gt;false&lt;/produces_customized&gt;&lt;relative_path&gt;/test&lt;/relative_path&gt;&lt;request_example/&gt;&lt;requires_acl_authorization&gt;true&lt;/requires_acl_authorization&gt;&lt;requires_authentication&gt;true&lt;/requires_authentication&gt;&lt;short_description/&gt;&lt;sys_class_name&gt;sys_ws_operation&lt;/sys_class_name&gt;&lt;sys_created_by&gt;boris.buechel&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2018-04-01 16:59:20&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;&lt;sys_id&gt;6a71db8cdb9d53402acaf13daf961960&lt;/sys_id&gt;&lt;sys_mod_count&gt;12&lt;/sys_mod_count&gt;&lt;sys_name&gt;Create a test&lt;/sys_name&gt;&lt;sys_package display_value="Global" source="global"&gt;global&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Global"&gt;global&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ws_operation_6a71db8cdb9d53402acaf13daf961960&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;boris.buechel&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2018-05-17 05:45:17&lt;/sys_updated_on&gt;&lt;web_service_definition display_value="TDD"&gt;05619b8cdb9d53402acaf13daf961923&lt;/web_service_definition&gt;&lt;web_service_version/&gt;&lt;/sys_ws_operation&gt;&lt;/record_update&gt;</payload>
+<payload_hash>156165298</payload_hash>
+<remote_update_set display_value="TDD">4627e787db4e17002acaf13daf96196f</remote_update_set>
+<replace_on_upgrade>false</replace_on_upgrade>
+<sys_created_by>boris.buechel</sys_created_by>
+<sys_created_on>2018-05-18 09:02:18</sys_created_on>
+<sys_id>c627e787db4e17002acaf13daf961970</sys_id>
+<sys_mod_count>0</sys_mod_count>
+<sys_recorded_at>1636ca18eb40000001</sys_recorded_at>
+<sys_updated_by>boris.buechel</sys_updated_by>
+<sys_updated_on>2018-05-18 09:02:18</sys_updated_on>
+<table/>
+<target_name>Create a test</target_name>
+<type>Scripted REST Resource</type>
+<update_domain>global</update_domain>
+<update_guid>e27071363eced3008b37689addfdead5</update_guid>
+<update_guid_history>e27071363eced3008b37689addfdead5:156165298,5f3a98a496d99340f385187c1558fc89:906075039,db6450e0f8d993406e48613b7aac0458:-1248257836,de6a6290b9d59340bcf45783d92cc9cf:1602264760,8dc66a10b7d59340ce921d10ea73ca25:1767023776,da862210b9d59340feb5a69be6a6e892:-638164731,06f5eadc629593400c5dd8c60ef0706f:1912386717,214566dc63959340a37ff15e852d995c:2010718116,b243e65c32959340d7179b16c9dd1727:995130343,9f612a1c48959340041ed7bcbef854cd:1172225790,fdbf5e9869959340dea6d6b85bc4d0ba:99198335,0eb25bcccb9d53401a25695ed826bf2d:-1519439066,bb91db8c299d5340bfeb4cea3d198964:-907946014</update_guid_history>
+<update_set display_value=""/>
+<view/>
+</sys_update_xml>
+</unload>

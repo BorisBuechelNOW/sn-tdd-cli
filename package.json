@@ -1,0 +1,29 @@
+{
+    "name": "sn-tdd-cli",
+    "version": "0.0.1",
+    "description": "TDD command line tool for ServiceNow's Automated Testing Framework",
+    "main": "main.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "dependencies": {
+        "chalk": "^2.4.1",
+        "commander": "^2.15.1",
+        "prompt": "^1.0.0",
+        "request": "^2.86.0",
+        "tape": "^4.9.0"
+    },
+    "devDependencies": {},
+    "keywords": [
+        "TDD",
+        "Testing",
+        "ServiceNow",
+        "ATF"
+    ],
+    "author": "BorisBuechelNOW",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/BorisBuechelNOW/sn-tdd-cli/issues"
+    },
+    "homepage": "https://github.com/BorisBuechelNOW/sn-tdd-cli"
+}
