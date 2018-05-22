@@ -2,7 +2,7 @@
 
 # sn-tdd-cli
 
-TDD command line tool for ServiceNow's Automated Testing Framework (ATF) which enable you to write and run your tests within your favorite editor.
+TDD command line tool for ServiceNow's Automated Testing Framework (ATF) which enables you to write and run your tests within your favorite editor.
 
 ![Visual Studio Code](vs_code.png)
 
