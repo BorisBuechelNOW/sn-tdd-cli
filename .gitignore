@@ -6,6 +6,7 @@ node_modules
 # JSDoc build output
 out
 
-instance/**
 .DS_Store
 package-lock.json
+vs_code.png
+README.md
