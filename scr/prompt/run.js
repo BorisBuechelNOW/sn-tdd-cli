@@ -45,12 +45,9 @@ function _getAtfTestResult(executionId, callback) {
  *
  * @param {function} callback - The call to log the response.
  */
-function readScript(callback) {
+function readScript(callback, filename) {
     fs.readFile(
-        SYS_ATF_STEP_DIR +
-        '/' +
-        config.atf_test.atf_steps.sys_update_name +
-        '.js',
+        SYS_ATF_STEP_DIR + '/' + filename,
         function(err, data) {
             if (err) {
                 throw err;
@@ -64,12 +61,14 @@ function readScript(callback) {
  * Rest module.
  * @module scr/prompt/run
  */
-module.exports = function() {
+module.exports = function(sys_id, filename) {
+    console.clear();
+    console.log('Test run started ...');
     readScript(function(err, data) {
         test.run(
-            config.atf_test.atf_steps.sys_id,
+            sys_id,
             data.toString(),
             _getAtfTestExecutionId
         );
-    });
+    }, filename);
 };

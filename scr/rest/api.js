@@ -20,8 +20,7 @@ module.exports = {
      * @param {function} callback - The callback function to log the response.
      */
     create: function(name, description, callback) {
-        request.post(
-            {
+        request.post({
                 headers: this.headers,
                 json: {
                     name: name,
@@ -42,14 +41,35 @@ module.exports = {
         );
     },
     /**
+     * Add a test step via REST.
+     * @param {string} sys_id - The sys_id of the test to be exectuted.
+     * @param {function} callback - The callback function to log the response.
+     */
+    addTestStep: function(sys_id, callback) {
+        request.post({
+                headers: this.headers,
+                url: config.instance.url + API_URL + 'test/' + sys_id,
+            },
+            function(err, res, body) {
+                if (err) {
+                    throw err;
+                    return;
+                }
+
+                if (res.statusCode === 201) {
+                    callback(body);
+                }
+            }
+        );
+    },
+    /**
      * Update a test via REST.
      * @param {string} sys_id - The sys_id of the test to be exectuted.
      * @param {string} script - The test code that will be will be replaced.
      * @param {function} callback - The callback function to log the response.
      */
     run: function(sys_id, script, callback) {
-        request.put(
-            {
+        request.put({
                 headers: this.headers,
                 json: {
                     script: script,
@@ -74,14 +94,14 @@ module.exports = {
      * @param {function} callback - The callback function to log the response.
      */
     result: function(executionId, callback) {
-        request.get(
-            {
+        request.get({
                 headers: this.headers,
                 url: config.instance.url + API_URL + 'result/' + executionId,
             },
             function(err, res, body) {
                 if (err) {
                     throw err;
+                    return;
                 }
 
                 if (res.statusCode === 200) {
