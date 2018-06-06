@@ -31,10 +31,11 @@ This is your local test file which will be synced to your ServiceNow instance, w
 
 * -V, or --version = Output the version number
 * -c, or --config = Configuration
-* -t or --test = Test option <create|autorun|run>
+* -t or --test = Test option <create|autorun|[test step sys_id]|add-test-step>
   * create = Add new test
   * autorun = Watches your local test for changes and executes the test on save.
-  * run = Run the test manually
+  * [test step sys_id] = Run the test manually - given test step will be updated remotly first via REST.
+  * add-test-step = Add new test step
 * -h or --help = Output usage information
 
 <!-- prettier-ignore-end -->
