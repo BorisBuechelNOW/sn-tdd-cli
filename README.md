@@ -8,7 +8,7 @@ TDD command line tool for ServiceNow's Automated Testing Framework (ATF) which e
 
 ## Installation
 
-1. Import update set `sys_remote_update_set_4627e787db4e17002acaf13daf96196f.xml` to your ServiceNow instance and commit update set.
+1. Import update set `sys_remote_update_set_9850d219db6a97002acaf13daf961981.xml` to your ServiceNow instance and commit update set.
 2. [Download node](http://www.nodejs.org) - This will include the NPM module which is used to install the dependencies.
 3. Once node is installed, navigate to the sn-tdd-cli folder you downloaded and run `npm install`. This will populate the `node_modules` directory. If you are behind a proxy or can't install node via the binary (to get npm) then you may have to run this on another machine and send yourself a zip archive of the directory.
 
